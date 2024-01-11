@@ -17,6 +17,11 @@
   }
 }
 
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url('../fonts/Gilroy-Medium.woff');
+
+}
 
 body{
   margin: 0;

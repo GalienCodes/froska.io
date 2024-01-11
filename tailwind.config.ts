@@ -11,10 +11,14 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      display:  ["Poppins", "sans-serif"],
-      body:  ["Poppins", "sans-serif"],
+      display: ['Gilroy-Medium', 'sans-serif'],
+      body:  ['Gilroy-Medium', 'sans-serif'],
+
     },
     extend: {
+      fontFamily:{
+        'Gilroy-Medium':['Gilroy-Medium', 'sans-serif'],
+      },
       screens: {
         mf: '990px',
         cr: '500px'
