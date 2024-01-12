@@ -6,7 +6,7 @@
 
 // const NavBar = () => {
 //   return (
-//     <div className=' sm:px-8 bg-[#E9E9E9] z-50 mx-auto w-full fixed shadow-sm text-gray-50'>
+//     <div className=' sm:px-8 bg-[#F3F4F5] z-50 mx-auto w-full fixed shadow-sm text-gray-50'>
 //       <div className=' flex items-center justify-between py-4 sm:mx-0 mx-4 '>
 //         <Link href={'/'}>
 //           <h1 className='font-black text-3xl'>FROSKA</h1>
