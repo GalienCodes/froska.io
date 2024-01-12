@@ -16,7 +16,7 @@ const config: Config = {
       fontFamily: {
         'GilroyMedium': ['Gilroy-Medium', 'sans-serif'],
         'GilroyBold':  ['Gilroy-Bold', 'sans-serif'],
-        'Gilroy-Regular':['Gilroy-Regular', 'sans-serif'],
+        'GilroyRegular':['Gilroy-Regular', 'sans-serif'],
       },
       screens: {
         mf: '990px',
