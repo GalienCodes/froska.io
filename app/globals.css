@@ -8,6 +8,19 @@
 
 }
 
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url('../fonts/Gilroy-Bold.woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url('../fonts/Gilroy-Regular.woff');
+  font-weight: 400;
+}
+
+
 body{
   margin: 0;
   padding: 0;

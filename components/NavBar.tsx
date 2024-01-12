@@ -30,7 +30,7 @@ const NavBar = () => {
 
 
   return (
-    <div className='fixed top-0 left-0 right-0 border-b-2 border-[#E9E9E9] bg-[#F3F4F5] dark:bg-[#2B2F38] shadow-b-sm '>
+    <div className='fixed top-0 left-0 right-0 border-b-[1px] border-[#E9E9E9] dark:border-[#42454C] bg-[#F3F4F5] dark:bg-[#2B2F38] shadow-b-sm '>
 
       <div className='mx-auto max-w-5xl py-5 bg- w-full z-50'>
         <div className='flex justify-between items-center'>
@@ -51,7 +51,7 @@ const NavBar = () => {
 
               })}
               <div className='flex items-center gap-6'>
-                <button className='bg-[#242529] px-3 py-2 rounded-md text-[#FFFFFF] flex items-center'>
+                <button className='bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] flex items-center'>
                   <span className='text-xs font-semibold'>
                     BUY FROSKA
                   </span>

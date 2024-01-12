@@ -11,14 +11,12 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      display: ['Gilroy-Medium', 'sans-serif'],
-      body:  ['Gilroy-Medium', 'sans-serif'],
 
-    },
     extend: {
-      fontFamily:{
-        'Gilroy-Medium':['Gilroy-Medium', 'sans-serif'],
+      fontFamily: {
+        'GilroyMedium': ['Gilroy-Medium', 'sans-serif'],
+        'GilroyBold':  ['Gilroy-Bold', 'sans-serif'],
+        'Gilroy-Regular':['Gilroy-Regular', 'sans-serif'],
       },
       screens: {
         mf: '990px',
