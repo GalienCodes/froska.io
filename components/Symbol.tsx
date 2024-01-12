@@ -13,7 +13,7 @@ const Symbol = () => {
                     </p>
                 </div>
                 <div className=' w-2/2'>
-                    <Image className="w-[150px] h-[138px] " src={reward} alt="fanacial-wallet" />
+                    <Image className="w-[150px] h-[138px] " src={reward} alt="rewards" />
                 </div>
             </div>
         </div>
