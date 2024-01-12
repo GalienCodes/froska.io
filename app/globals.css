@@ -20,6 +20,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Gilroy-HeavyItalic";
+  src: url('../fonts/Gilroy-HeavyItalic.woff');
+  font-weight: 400;
+}
+
 
 body{
   margin: 0;
