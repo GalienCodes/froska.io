@@ -17,6 +17,7 @@ const config: Config = {
         'GilroyMedium': ['Gilroy-Medium', 'sans-serif'],
         'GilroyBold':  ['Gilroy-Bold', 'sans-serif'],
         'GilroyRegular':['Gilroy-Regular', 'sans-serif'],
+        'GilroyHeavyItalic':['Gilroy-HeavyItalic', 'sans-serif'],
       },
       screens: {
         mf: '990px',
