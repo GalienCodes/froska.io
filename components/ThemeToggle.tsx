@@ -24,15 +24,15 @@ const ThemeToggle = () => {
         }
     }, [darkMode])
     return (
-        <div className="relative w-16 h-8 flex items-center dark:bg-[#FFFFFF] bg-[#2B2F38]  cusor-pointer rounded-3xl p-1"
+        <div className="relative w-12 h-6 flex items-center dark:bg-[#FFFFFF] bg-[#2B2F38]  cusor-pointer rounded-3xl p-1"
             onClick={() => setGlobalState('darkMode',!darkMode)}>
-            <FaMoon className="text-white" size={18} />
-            <div className="absolute bg-white dark:bg-[#2B2F38] w-6 h-6 rounded-full shadow-md transition-transform duration-300"
+            <FaMoon className="text-white" size={14} />
+            <div className="absolute bg-white dark:bg-[#2B2F38] w-4 h-4 rounded-full shadow-md transition-transform duration-300"
                 style={
                     darkMode ? { left: "2xp" } : { right: "2px" }
                 }>
             </div>
-            <BsSunFill className="ml-auto  text-yellow-400" size={20} />
+            <BsSunFill className="ml-auto  " size={14} />
         </div>
     )
 }
