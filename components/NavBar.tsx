@@ -30,7 +30,7 @@ const NavBar = () => {
 
 
   return (
-    <div className='fixed top-0 left-0 right-0 border-b-[1px] border-[#E9E9E9] dark:border-[#42454C] bg-[#F3F4F5] dark:bg-[#2B2F38] shadow-b-sm '>
+    <div className='fixed top-0 left-0 right-0 border-b-[1.5px] border-[#F3F4F5] dark:border-[#42454C] bg-[#FFFFFF] dark:bg-[#2B2F38] shadow-b-sm '>
 
       <div className='mx-auto max-w-5xl py-5 bg- w-full z-50'>
         <div className='flex justify-between items-center'>
