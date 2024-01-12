@@ -10,14 +10,14 @@ const Hero = () => {
   const [darkMode] = useGlobalState('darkMode');
 
     return (
-        <div className='pt-32 ms:pt-20   max-w-5xl mx-auto text-[#242529] dark:text-[#FFFFFF] '>
+        <div className='pt-32 pb-24 max-w-5xl mx-auto text-[#242529] dark:text-[#FFFFFF] '>
             <div className='flex flex-col sm:flex-row justify-between items-center '>
                 <div className='w-2/4'>
                     <div className='flex flex-col font-GilroyBold text-5xl gap-2'>
                         <span className=''>Froska sees,</span>
                         <span className=''>froska rewards!</span>
                     </div>
-                    <p className='text-xs dark:text-[#FFFFFF] text-[#717580] font-Gilroy-Regular py-6'>Our beloved Watchful companion, The endearing feline companion of Metis CEO Elena
+                    <p className='text-xs dark:text-[#FFFFFF] text-[#717580] font-GilroyRegular py-6'>Our beloved Watchful companion, The endearing feline companion of Metis CEO Elena
                         entered our world as a serendipitous encounter. Elena, captivated by this furry marvel,
                         embraced FROSKA into the Metis family.
                     </p>
