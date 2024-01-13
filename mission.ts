@@ -18,5 +18,28 @@ export const froskaMission = [
         id: 4,
         title: "Uniting for a Safer Future",
         description: "FROSKA's mission isn't just about rewards; it's about collective action and shared responsibility. Together, we strive to fortify the foundations of Metis, establishing it as a reliable and secure platform within the ever-evolving landscape of Web 3."
-    } 
+    }
+]
+
+export const tokenomicItems = [
+    {
+        id: 1,
+        name: "Liquidity"
+    },
+    {
+        id: 2,
+        name: "Marketing and BD"
+    },
+    {
+        id: 3,
+        name: "Metis Community Allocation"
+    },
+    {
+        id: 5,
+        name: "Community Future rewards program"
+    },
+    {
+        id: 6,
+        name: "Early Contributors, Ecosystem builders, Metis KOLsAdvisors, Froska Ambassadors"
+    },
 ]

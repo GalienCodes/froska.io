@@ -1,6 +1,4 @@
 import { froskaMission } from '@/mission';
-import React from 'react'
-import { AiFillLinkedin } from 'react-icons/ai';
 
 interface Mission {
     id: number,
