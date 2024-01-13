@@ -26,6 +26,17 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Gilroy-Extrabold";
+  src: url('../fonts/Gilroy-Extrabold.woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gilroy-Semibold";
+  src: url('../fonts/Gilroy-Semibold.woff');
+  font-weight: 400;
+}
 
 body{
   margin: 0;
@@ -35,7 +46,7 @@ body{
   position: relative;
   min-height: 100vh;
   font-family: "Gilroy-Medium", "sans-serif" !important;
-  background: rgb(59 130 246);
+  background: #F3F4F5;
 }
 .fotter_d{
 position:absolute;
@@ -43,6 +54,3 @@ left:0;
 bottom:0;
 right:0;
 } 
-.Footercon{
-  font-size: 20px;
-}

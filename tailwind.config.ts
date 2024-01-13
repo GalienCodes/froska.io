@@ -18,6 +18,8 @@ const config: Config = {
         'GilroyBold':  ['Gilroy-Bold', 'sans-serif'],
         'GilroyRegular':['Gilroy-Regular', 'sans-serif'],
         'GilroyHeavyItalic':['Gilroy-HeavyItalic', 'sans-serif'],
+        'GilroyExtrabold':['Gilroy-Extrabold', 'sans-serif'],
+        'GilroySemibold':['Gilroy-Semibold', 'sans-serif'],
       },
       screens: {
         mf: '990px',
