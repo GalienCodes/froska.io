@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Symbol = () => {
     return (
         <div className='max-w-5xl mx-6 md:mx-auto bg-[#F3F4F5] rounded-tr-md rounded-tl-md text-gray-50 py-10 px-0  md:px-16 '>
-            <div className='mx-6 md:mx-6 xl:mx-0'>
+            <div className='mx-6 md:mx-4 xl:mx-0'>
                 <div className='flex flex-col sm:flex-row justify-between items-center'>
                     <div className='text-[#1F1E1E] w-full md:w-1/2'>
                         <h1 className='font-GilroyBold text-lg md:text-xl'>Symbol Of Vigilance & Reward</h1>

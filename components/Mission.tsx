@@ -14,7 +14,7 @@ const Mission = () => {
                     Our Mission
                 </h2>
 
-                <div className=' pt-6 md:pt-2 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-12  justify-between  items-start'>
+                <div className=' pt-6 md:pt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-12  justify-between  items-start'>
                     {froskaMission.map((item: Mission) => {
                         const { id, title, description } = item;
                         return (
