@@ -6,7 +6,7 @@ import { tokenomicItems } from '@/mission'
 
 const Tokenomics = () => {
     return (
-        <div className='max-w-5xl mx-6 md:mx-auto bg-[#F3F4F5] rounded-md text-gray-50 py-10 mt-10 px-0  md:px-16 '>
+        <div className='max-w-5xl mx-6 md:mx-auto bg-[#F3F4F5] rounded-md text-gray-50 py-10 mt-10 md:mt-0 px-0  md:px-16 '>
             <div className='mx-6 md:mx-4 xl:mx-0'>
                 <h2 className='font-GilroyBold text-xl pb-7 md:pb-0 text-[#1F1E1E]'>
                     Tokenomics
