@@ -10,7 +10,7 @@ const LegacyVision = () => {
                     <div className=' w-2/2'>
                         <Image className="w-[150px] h-[150px] " src={vision} alt="vision" />
                     </div>
-                    <div className='tex-[#F3F4F5] w-full md:w-1/2 mt-10 sm:mb-0'>
+                    <div className='tex-[#F3F4F5] w-full md:w-1/2 mt-10 sm:mt-0 '>
                         <h1 className='font-GilroyBold text-lg md:text-xl'>Legacy and vision</h1>
                         <p className='font-GilroyRegular text-xs w-full pt-7 md:pt-2'>
                             FROSKA’s legacy shapes our journey, reminding us of our collective goal: to foster a secure and rewarding ecosystem for all within Metis.
