@@ -35,7 +35,7 @@ const NavBar = () => {
     setOpened(!opened);
   };
   return (
-    <div className='fixed top-0 left-0 right-0 border-b-[1.5px] lg:px-0 px-4  border-[#F3F4F5] dark:border-[#42454C] bg-[#FFFFFF] dark:bg-[#2B2F38] shadow-b-sm '>
+    <div className='fixed top-0 left-0 right-0 border-b-[1.5px] xl:px-0 px-6  border-[#F3F4F5] dark:border-[#42454C] bg-[#FFFFFF] dark:bg-[#2B2F38] shadow-b-sm '>
       <div className='mx-auto max-w-5xl py-5 bg- w-full z-[1]'>
         <div className='flex justify-between items-center'>
           <Link href={'/'}>
@@ -71,11 +71,11 @@ const NavBar = () => {
           {/* Phone */}
           <div className={opened ? 'block fixed top-0 right-0 bottom-0  shadow-xl  w-5/6 max-w-sm overflow-hidden bg-[#F3F4F5] dark:bg-[#1F1E1E] overflow-y-auto transition-transform duration-300' : 'hidden'}>
             {opened ? (
-              <div className='flex items-center py-5 px-5 justify-between border-b-[1.5px] dark:border-[#F3F4F5] border-[#42454C]'>
+              <div className='flex items-center py-4 px-5 justify-between border-b-[1.5px] dark:border-[#F3F4F5] border-[#42454C]'>
                 <div className='md:hidden  block'>
-                  <MdClose className='text-3xl dark:text-[#FFFFFF] text-[#1F1E1E]' onClick={() => handleOpened()} />
+                  <MdClose className='text-4xl dark:text-[#FFFFFF] text-[#1F1E1E]' onClick={() => handleOpened()} />
                 </div>
-                <button className='flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-1 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
+                <button className='flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
                   <span className='text-xs font-semibold'>
                     BUY FROSKA
                   </span>
