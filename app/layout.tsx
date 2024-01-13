@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -17,6 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <title>Frosja</title>
+        <meta name="description" content="The endearing feline companion of Metis CEO Elena" />
+      </Head>
       <body className={`bg-[#FFFFFF] dark:bg-[#2B2F38]`}>
         <NavBar />
         {children}</body>
