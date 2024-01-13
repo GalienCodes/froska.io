@@ -29,12 +29,12 @@ const Footer = () => {
                     </ul>
                     <ul className="">
                         <li className="mb-1.5">Help & Support </li>
-                        <li className="mb-1.5">Safety & Securi </li>
+                        <li className="mb-1.5">Safety & Security </li>
                         <li className="mb-1.5">Froska Foundation</li>
                     </ul>
                     <ul className="">
                         <li className="mb-1.5">Help & Support </li>
-                        <li className="mb-1.5">Safety & Securi </li>
+                        <li className="mb-1.5">Safety & Security </li>
                         <li className="mb-1.5">Froska Foundation</li>
                     </ul>
                 </div>

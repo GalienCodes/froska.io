@@ -48,7 +48,7 @@ export const distribution = [
     {
         id: 1,
         name: "Liquidity Burn: 40% (40 Million Tokens)",
-        mainDescription: "Reflecting the typical meme token mechanics, 30% of the tokens (30 million) will be burned to enhance liquidity, contributing to price stability and long-term sustainability.",
+        mainDescription: "40% of the tokens (40 million) will be pooled to enhance initial liquidity, contributing to price stability and long-term sustainability.",
         description:"",
         points: [],
         subPoints: []
@@ -69,6 +69,7 @@ export const distribution = [
         points: ["MIP2/ MIP3 CEG voters", "Nuvo Contributors"],
         subPoints: [
             'Nuvo Participation Badge Holders',
+            'Metis advocates',
             'Nuvo Festive Spirit Holders',
             'Nuvo AMA badge owners'
         ]
