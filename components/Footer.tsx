@@ -44,10 +44,10 @@ const Footer = () => {
                     <div className="mx-4 sm:mx-6 lg:mx-0  flex flex-col md:flex-row justify-center md:justify-between">
                         <h2 className='text-center sm:text-center'> &copy; {date - 1} - {date} Froska</h2>
                         <div className='flex gap-4 items-center justify-center'>
-                            <a href="https://x.com/froska_io?s=21&t=iuzhPCKkSuV_btx2HUZcdg" target='_blank'>
+                            <a href="https://x.com/metisfroska?s=21&t=R1Npp91OsViMHyM3gdEGVQ" target='_blank'>
                                 <FaSquareXTwitter className="text-center cursor-pointer" size={18} />
                             </a>
-                            <a href="https://t.me/froska_official" target='_blank'>
+                            <a href="https://t.me/metisfroska" target='_blank'>
                                 <FaTelegram className="text-center cursor-pointer" size={18} />
                             </a>
                         </div>
