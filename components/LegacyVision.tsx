@@ -14,7 +14,7 @@ const LegacyVision = () => {
                     <p className='font-GilroyRegular text-xs w-full pt-2'>
                         FROSKA’s legacy shapes our journey, reminding us of our collective goal: to foster a secure and rewarding ecosystem for all within Metis.
                     </p>
-                    <p className='font-GilroyRegular text-xs w-full pt-2'>
+                    <p className='font-GilroyRegular text-xs w-full pt-2' id='Mission'>
                         FROSKA is Metis’ CEO Elena’s cat. Grown in a setting of love and generosity, FROSKA promises to watch quietly and reward
                     </p>
                 </div>
