@@ -56,7 +56,7 @@ export const distribution = [
     {
         id: 2,
         name: "Airdrop and Rewards: 30% (30 Million Tokens)",
-        mainDescription: "FROSKA aims to be a cornerstone of the Web3 community. Half of the total token supply, 50 million tokens, will be airdropped to the broader Metis Web3 community, fostering engagement and participation across the ecosystem",
+        mainDescription: "FROSKA aims to be a cornerstone of the Web3 community. Half of the total token supply, 30 million tokens, will be airdropped to the broader Metis Web3 community, fostering engagement and participation across the ecosystem",
         description:"",
         points: [],
         subPoints: []
@@ -77,7 +77,7 @@ export const distribution = [
     },
     {
         id: 4,
-        name: "Community Detremined Future Rewards: 20% (20 Million Tokens)",
+        name: "Community Determined Future Rewards: 20% (20 Million Tokens)",
         mainDescription: "The remaining 20 million tokens from the Airdrop pool will serve as rewards for Metis users, Froska holders and contributors, incentivizing ongoing contributions and ensuring sustained growth",
         description:"",
         points: [],
