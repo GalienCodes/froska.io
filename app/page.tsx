@@ -16,7 +16,6 @@ export default function Home() {
       <Mission/>
       <Tokenomics/>
       <Distribution/>
-      <Dev/>
       <Footer/>
     </div>
   )
