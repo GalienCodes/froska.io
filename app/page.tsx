@@ -1,3 +1,4 @@
+import Claim from '@/components/Claim'
 import Dev from '@/components/Dev'
 import Distribution from '@/components/Distribution'
 import Footer from '@/components/Footer'
@@ -16,6 +17,7 @@ export default function Home() {
       <Mission/>
       <Tokenomics/>
       <Distribution/>
+      <Claim/>
       <Footer/>
     </div>
   )
