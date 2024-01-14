@@ -28,7 +28,7 @@ const Footer = () => {
                             <li className="mb-1.5">Feedback</li>
                             <li className="mb-1.5">Community</li>
                         </ul>
-                        <ul className="py-2">
+                        <ul className="hidden md:block py-2">
                             <li className="mb-1.5">Help & Support </li>
                             <li className="mb-1.5">Safety & Security </li>
                             <li className="mb-1.5">Froska Foundation</li>
