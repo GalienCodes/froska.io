@@ -22,15 +22,17 @@ declare global {
 }
 
 // Ensure 'ethereum' is available
-const ethereum = window.ethereum;
-if (!ethereum) {
-    console.log('Please install Metamask');
-}
+let ethereum:any
 
-// Initialize Web3 using 'ethereum' and assign it to 'window.web3'
-window.web3 = new Web3(ethereum);
-window.web3 = new Web3(window.web3.currentProvider);
-
+if (typeof window !== 'undefined') {
+    ethereum = window.ethereum;
+    window.web3 = new Web3(ethereum);
+    window.web3 = new Web3(window.web3.currentProvider);
+  
+    // Rest of your code that relies on 'window'
+  } else {
+    console.log('Window is not defined (server-side rendering)');
+  }
 
 const connectWallet = async () => {
     try {
@@ -67,7 +69,6 @@ const isWalletConnected = async () => {
         if (accounts.length) {
             setGlobalState('connectedAccount', accounts[0]?.toLowerCase());
         } else {
-            toast.error('Please install Metamask');
             setGlobalState('connectedAccount', '');
         }
     } catch (error: any) {

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/NavBar'
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +25,9 @@ export default function RootLayout({
       </Head>
       <body className={`bg-[#FFFFFF] dark:bg-[#2B2F38]`}>
         <NavBar />
-        {children}</body>
+        {children}
+        <Toaster />
+      </body>
     </html>
   )
 }
