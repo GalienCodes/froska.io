@@ -1,4 +1,5 @@
 import Claim from '@/components/Claim'
+import ClaimModal from '@/components/ClaimModal'
 import Dev from '@/components/Dev'
 import Distribution from '@/components/Distribution'
 import Footer from '@/components/Footer'
@@ -11,6 +12,7 @@ import Tokenomics from '@/components/Tokenomics'
 export default function Home() {
   return (
     <div >
+      <ClaimModal/>
       <Hero/>
       <Symbol/>
       <LegacyVision/>

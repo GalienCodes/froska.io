@@ -13,7 +13,7 @@ const Tokenomics = () => {
                 </h2>
 
                 <div className='flex flex-col sm:flex-row justify-between items-center text-[#1F1E1E]'>
-                    <div className='text-center sm:text-left w-full sm:w-4/5'>
+                    <div className='text-center sm:text-left w-full sm:w-3/5'>
                         {tokenomicItems.map((item, index) => {
                             const { id, name } = item
                             return (

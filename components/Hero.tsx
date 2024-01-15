@@ -12,7 +12,7 @@ const Hero = () => {
     return (
         <div className='pt-32 pb-24 max-w-5xl mx-auto text-[#242529] dark:text-[#FFFFFF] '>
             <div className='mx-4 sm:mx-6 xl:mx-0'>
-                <div className='flex flex-col sm:flex-row justify-between items-center text-center md:text-left  '>
+                <div className='flex flex-col md:flex-row justify-between items-center text-center md:text-left  '>
                     <div className='flex flex-col justify-center sm:justify-start  w-full md:w-2/4 text-center md:text-left'>
                         <div className='flex flex-col font-GilroyBold text-4xl md:text-5xl gap-2'>
                             <span className='md:text-left text-center'>Froska sees,</span>
@@ -31,7 +31,7 @@ const Hero = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='w-2/2 order-first sm:order-last mb-12 sm:mb-0'>
+                    <div className='w-2/2 order-first md:order-last mb-12 md:mb-0'>
                         <Image src={darkMode ? heroWhite : heroDark} alt='froska' className=" w-[280px] h-[310px] text-center" />
                     </div>
                 </div>
