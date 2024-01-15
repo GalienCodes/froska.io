@@ -9,13 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ethersproject/providers": "^5.7.2",
+    "@types/web3": "^1.2.2",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
     "react-globally": "^1.1.0",
     "react-hooks-global-state": "^2.1.0",
+    "react-hot-toast": "^2.4.1",
     "react-icon": "^1.0.0",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "web3": "^4.3.0",
+    "web3-eth-contract": "^4.1.4",
+    "web3-utils": "^4.1.0",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "@types/node": "^20",
