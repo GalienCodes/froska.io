@@ -1,6 +1,6 @@
 'use client';
 import { setGlobalState, useGlobalState,truncate } from '@/store';
-import { connectWallet, isWalletConnected } from '@/web3';
+import { connectWallet, isWalletConnected } from '@/web3Services';
 import { useEffect } from 'react';
 import { GiDropEarrings } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
