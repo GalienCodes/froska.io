@@ -1,18 +1,19 @@
 import Web3 from 'web3'
 import froska from "./abis/froska.json";
 import airdrop from "./abis/airdrop.json";
-import { setGlobalState } from './store';
+import { getGlobalState, setAlert, setGlobalState, setLoadingMsg } from './store';
+import { fromWei, toWei } from 'web3-utils';
 import toast from 'react-hot-toast';
+import AirdropAddress from "./abis/airdropAddress.json"
+import FroskaAddress from "./abis/froskaAddress.json"
+
 
 type Address = string
 type Amount = string // amounts are always presented as strings
 
-// Network settings have more properties, 
-// but we're only interested in the `address`
-type NetworkSettings = Record<string, { address: Address }>
 
-const FROSKA_ABI = froska.abi as unknown
-const AIRDROP_ABI = airdrop.abi as unknown
+const FROSKA_ABI = froska.abi as any
+const AIRDROP_ABI = airdrop.abi as any
 // Check if 'ethereum' and 'window' are available in the global scope
 declare global {
     interface Window {
@@ -22,17 +23,17 @@ declare global {
 }
 
 // Ensure 'ethereum' is available
-let ethereum:any
+let ethereum: any
 
 if (typeof window !== 'undefined') {
     ethereum = window.ethereum;
     window.web3 = new Web3(ethereum);
     window.web3 = new Web3(window.web3.currentProvider);
-  
+
     // Rest of your code that relies on 'window'
-  } else {
+} else {
     console.log('Window is not defined (server-side rendering)');
-  }
+}
 
 const connectWallet = async () => {
     try {
@@ -42,7 +43,6 @@ const connectWallet = async () => {
         }
         const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
         setGlobalState('connectedAccount', accounts[0]?.toLowerCase());
-        window.location.reload();
     } catch (error: any) {
         console.log(error.message);
     }
@@ -58,7 +58,6 @@ const isWalletConnected = async () => {
         const accounts = await ethereum.request({ method: 'eth_accounts' });
 
         window.ethereum.on('chainChanged', (chainId: string) => {
-            window.location.reload();
         });
 
         window.ethereum.on('accountsChanged', async () => {
@@ -76,5 +75,123 @@ const isWalletConnected = async () => {
     }
 };
 
+const getEtheriumContract = async (abi: any, contractAddress: string) => {
+    const connectedAccount = getGlobalState('connectedAccount');
 
-export { connectWallet, isWalletConnected }
+    if (connectedAccount) {
+        const web3 = window.web3;
+        const contract = new web3.eth.Contract(abi, contractAddress);
+        return contract;
+    } else {
+        return;
+    }
+};
+
+const FroskaContract = async () => {
+    const FroskaContract = await getEtheriumContract(
+        FROSKA_ABI,
+        FroskaAddress.Froska
+    );;
+
+    return FroskaContract;
+};
+const AirdropContract = async () => {
+    const AirdropContract = await getEtheriumContract(
+        AIRDROP_ABI,
+        AirdropAddress.Airdrop
+    );
+    return AirdropContract;
+};
+
+
+const depositAmount = async (amount: string) => {
+    const connectedAccount = getGlobalState('connectedAccount');
+    amount = toWei(amount.toString(), 'ether');
+    try {
+        const airdropContract = await AirdropContract();
+        const froskaContract = await FroskaContract();
+        setLoadingMsg('Deposit initiated!');
+        // Approve the contract to use Froska tokens
+        const transaction1 = await froskaContract.methods.approve(
+            AirdropAddress.Airdrop,
+            amount
+        ).send({ from: connectedAccount });
+        // Deposit Froska tokens
+        const transaction2 = await airdropContract?.methods.depositAirdropFunds(
+            amount)
+            .send({ from: connectedAccount });
+        if (transaction1 && transaction2) {
+            setAlert(`Deposited successfully`);
+            setGlobalState("initDepositAmount", '')
+        }
+    } catch (error) {
+        setAlert('Deposit failed!', 'red');
+        console.error('Deposit failed', { error });
+    }
+}
+
+const claim = async () => {
+    const connectedAccount = getGlobalState('connectedAccount');
+    try {
+        if (connectedAccount) {
+            const airdropContract = await AirdropContract();
+
+            setLoadingMsg('Claim initiated!');
+            const transaction = await airdropContract?.methods.claimAirdrop()
+                .send({ from: connectedAccount });
+            if (transaction) {
+                setAlert(`Claimed successfully`);
+            }
+        }else{
+            connectWallet()
+        }
+    } catch (error) {
+        setAlert('Claimed failed!', 'red');
+        console.error('Claimed failed', { error });
+    }
+}
+
+
+const withdrawRBalance = async () => {
+    const connectedAccount = getGlobalState('connectedAccount');
+    try {
+        const airdropContract = await AirdropContract();
+
+        setLoadingMsg('Withdrawl initiated!');
+        const transaction = await airdropContract?.methods.withdrawRemainingBalance(
+        ).send({ from: connectedAccount });
+        if (transaction) {
+            setAlert(`Withdrawn Successfully!`);
+        }
+    } catch (error) {
+        setAlert('withdrawal failed!', 'red');
+        console.error('withdrawal failed', { error });
+    }
+}
+
+const getFounder = async () => {
+    try {
+        const airdropContract = await AirdropContract();
+        const result = await airdropContract?.methods.founder().call();
+        setGlobalState('founderAccount', result.toLowerCase())
+        return result;
+    } catch (error) {
+        console.log("You must connect you Metamask wallet");
+
+    }
+}
+
+const checkHasClaimed = async () => {
+    const connectedAccount = getGlobalState('connectedAccount');
+    try {
+        const airdropContract = await AirdropContract();
+        const result = await airdropContract?.methods.hasClaimed(connectedAccount).call();
+        setGlobalState('hasClaimed',result)
+        return result;
+    } catch (error) {
+        console.log("You must connect you Metamask wallet");
+
+    }
+}
+
+export { connectWallet,checkHasClaimed ,withdrawRBalance, isWalletConnected, FroskaContract, AirdropContract, depositAmount, claim, getFounder }
