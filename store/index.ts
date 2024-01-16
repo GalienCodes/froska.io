@@ -4,6 +4,8 @@ import { createGlobalState } from "react-hooks-global-state";
 const {setGlobalState, useGlobalState, getGlobalState }=createGlobalState({
   darkMode: true,
   modal:false,
+  contractBalance:'',
+  isEligible:false,
   initDepositAmount:'',
   hasClaimed:false,
   modalToast: 'scale-0',
