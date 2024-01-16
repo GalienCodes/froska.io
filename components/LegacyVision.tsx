@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const LegacyVision = () => {
     return (
-        <div className='max-w-5xl mx-6 md:mx-auto bg-[#1F1E1E] rounded-br-md rounded-bl-md text-[#F3F4F5] py-10 px-0  md:px-16 '>
+        <div className='max-w-5xl mx-6 lg:mx-auto bg-[#1F1E1E] rounded-br-md rounded-bl-md text-[#F3F4F5] py-10 px-0  md:px-16 '>
             <div className='mx-6 md:mx-6 xl:mx-0'>
                 <div className='flex flex-col sm:flex-row justify-between items-center'>
                     <div className=' w-2/2'>

@@ -5,7 +5,7 @@ import { distribution, tokenomicItems } from '@/mission'
 
 const Distribution = () => {
     return (
-        <div className='max-w-5xl mx-6 md:mx-auto text-[#FFFFFF] py-10 px-0  md:px-16 bg-[#1F1E1E] mt-20 md:mt-10 rounded-md'>
+        <div className='max-w-5xl mx-6 lg:mx-auto text-[#FFFFFF] py-10 px-0  md:px-16 bg-[#1F1E1E] mt-20 md:mt-10 rounded-md'>
             <div className='mx-6 md:mx-4 xl:mx-0'>
                 <h2 className='font-GilroyBold text-xl  text-[#FFFFFF]'>
                     Token distribution breakdown
