@@ -110,10 +110,10 @@ const depositAmount = async (amount: string) => {
     try {
         const airdropContract = await AirdropContract();
         const froskaContract = await FroskaContract();
-        
+
         setLoadingMsg('Deposit initiated!');
         // Approve the contract to use Froska tokens
-        
+
         const transaction1 = await froskaContract.methods.approve(
             AirdropAddress.Airdrop,
             amount
@@ -129,8 +129,27 @@ const depositAmount = async (amount: string) => {
         }
     } catch (error) {
         setAlert('Deposit failed!', 'red');
-        console.error('Deposit failed', { error });
     }
+}
+
+const startTheAirdrop = async () => {
+    const connectedAccount = getGlobalState('connectedAccount');
+    try {
+        if (connectedAccount) {
+            const airdropContract = await AirdropContract();
+
+            setLoadingMsg('Airdrop initiated');
+            const transaction = await airdropContract?.methods.startAirdrop().call();
+            if (transaction) {
+                setAlert(`Airdrop Started successfully`);
+            }
+        } else {
+            connectWallet()
+        }
+    } catch (error) {
+        setAlert('Airdrop failed!', 'red');
+    }
+
 }
 
 const claim = async () => {
@@ -150,7 +169,6 @@ const claim = async () => {
         }
     } catch (error) {
         setAlert('Claimed failed!', 'red');
-        console.error('Claimed failed', { error });
     }
 }
 
@@ -168,67 +186,47 @@ const withdrawRBalance = async () => {
         }
     } catch (error) {
         setAlert('withdrawal failed!', 'red');
-        console.error('withdrawal failed', { error });
     }
 }
 
 const getFounder = async () => {
-    try {
-        const airdropContract = await AirdropContract();
-        const result = await airdropContract?.methods.founder().call();
-        setGlobalState('founderAccount', result.toLowerCase())
-        return result;
-    } catch (error) {
-        console.log("You not the founder");
-
-    }
+    const airdropContract = await AirdropContract();
+    const result = await airdropContract?.methods.founder().call();
+    setGlobalState('founderAccount', result.toLowerCase())
+    return result;
 }
 
 const checkHasClaimed = async () => {
     const connectedAccount = getGlobalState('connectedAccount');
-    try {
-        if (connectedAccount) {
-            const airdropContract = await AirdropContract();
-            const result = await airdropContract?.methods.hasClaimed(connectedAccount).call();
-            setGlobalState('isEligible', result)
-            return result;
-        }
-    } catch (error) {
-        console.log("You're not eligible");
-
+    if (connectedAccount) {
+        const airdropContract = await AirdropContract();
+        const result = await airdropContract?.methods.hasClaimed(connectedAccount).call();
+        setGlobalState('isEligible', result)
+        return result;
     }
+
 }
 
 const checkIsEligible = async () => {
     const connectedAccount = getGlobalState('connectedAccount');
-    try {
-        if (connectedAccount) {
-            const airdropContract = await AirdropContract();
-            const result = await airdropContract?.methods.isEligible(connectedAccount).call();
-            setGlobalState('isEligible', result)
-            return result;
-        }
-    } catch (error) {
-        console.log("You must connect you Metamask wallet");
-
+    if (connectedAccount) {
+        const airdropContract = await AirdropContract();
+        const result = await airdropContract?.methods.isEligible(connectedAccount).call();
+        setGlobalState('isEligible', result)
+        return result;
     }
 }
 
 const checkContractBalance = async () => {
     const connectedAccount = getGlobalState('connectedAccount');
 
-    try {
-        if (connectedAccount) {
-            const froskaContract = await FroskaContract();
-            const result = await froskaContract?.methods.balanceOf(AirdropAddress.Airdrop,).call();
-            setGlobalState('contractBalance', fromWei(result.toString(), 'ether'))
-            return result;
-        }
-    } catch (error) {
-        console.log("You must connect you Metamask wallet");
-
+    if (connectedAccount) {
+        const froskaContract = await FroskaContract();
+        const result = await froskaContract?.methods.balanceOf(AirdropAddress.Airdrop,).call();
+        setGlobalState('contractBalance', fromWei(result.toString(), 'ether'))
+        return result;
     }
 }
 
 
-export { connectWallet, checkHasClaimed, checkIsEligible, checkContractBalance, withdrawRBalance, isWalletConnected, FroskaContract, AirdropContract, depositAmount, claim, getFounder }
+export { connectWallet, startTheAirdrop, checkHasClaimed, checkIsEligible, checkContractBalance, withdrawRBalance, isWalletConnected, FroskaContract, AirdropContract, depositAmount, claim, getFounder }
