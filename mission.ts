@@ -60,8 +60,8 @@ export const distribution = [
                 points: ["MIP2/ MIP3 CEG voters", "Nuvo Contributors",'Metis advocates'],
                 subPoints: [
                     'Nuvo Participation Badge Holders',
-                    'Nuvo Festive Spirit Holders',
-                    'Nuvo AMA badge owners'
+                    'Nuvo AMA badge owners',
+                    'Nuvo Festive Spirit Holders'
                 ]
             },
             {
