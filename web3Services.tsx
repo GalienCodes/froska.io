@@ -110,8 +110,10 @@ const depositAmount = async (amount: string) => {
     try {
         const airdropContract = await AirdropContract();
         const froskaContract = await FroskaContract();
+        
         setLoadingMsg('Deposit initiated!');
         // Approve the contract to use Froska tokens
+        
         const transaction1 = await froskaContract.methods.approve(
             AirdropAddress.Airdrop,
             amount
@@ -120,6 +122,7 @@ const depositAmount = async (amount: string) => {
         const transaction2 = await airdropContract?.methods.depositAirdropFunds(
             amount)
             .send({ from: connectedAccount });
+
         if (transaction1 && transaction2) {
             setAlert(`Deposited successfully`);
             setGlobalState("initDepositAmount", '')
