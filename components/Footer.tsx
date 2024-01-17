@@ -15,7 +15,7 @@ const Footer = () => {
         <div className='bg-[#F3F4F5] dark:bg-[#1F1E1E] mt-12 py-10 '>
             <div className='mx-6 md:mx-6 xl:mx-0'>
                 <div className='max-w-5xl mx-auto py-4 mb-10 text-[#1F1E1E]  dark:text-[#FFFFFF] '>
-                    <div className='font-GilroyRegular text-xs grid grid-cols-1 gap-4 sm:grid-cols-4 sm:gap-12  justify-between '>
+                    <div className='font-GilroyRegular text-[12.5px] grid grid-cols-1 gap-4 sm:grid-cols-4 sm:gap-12  justify-between '>
                         <div className='py-2'>
                             <Image src={darkMode ? Logowhite : logo} alt='froska' height={100} width={90} />
                             <h2 className='pt-4'>
@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='dark:bg-[#FFFFFF] bg-[#1F1E1E] dark:text-[#1F1E1E]  px-2 md:px-0 text-[#FFFFFF]   py-4 '>
-                <div className='max-w-5xl mx-auto font-GilroySemibold text-xs'>
+                <div className='max-w-5xl mx-auto font-GilroySemibold text-[12.5px]'>
                     <div className="mx-4 sm:mx-6 lg:mx-0  flex items-center justify-between">
                         <h2 className='text-left'> &copy; {date - 1} - {date} Froska</h2>
                         <div className='flex gap-4 items-center justify-center '>

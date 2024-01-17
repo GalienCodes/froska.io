@@ -18,13 +18,13 @@ const Hero = () => {
                             <span className='md:text-left text-center'>Froska sees,</span>
                             <span className='md:text-left text-center'>froska rewards!</span>
                         </div>
-                        <p className='text-center md:text-left text-xs dark:text-[#FFFFFF] text-[#717580] font-GilroyRegular py-6'>Our beloved Watchful companion, The endearing feline companion of Metis CEO Elena
+                        <p className='text-center md:text-left text-[12.5px] dark:text-[#FFFFFF] text-[#717580] font-GilroyRegular py-6'>Our beloved Watchful companion, The endearing feline companion of Metis CEO Elena
                             entered our world as a serendipitous encounter. Elena, captivated by this furry marvel,
                             embraced FROSKA into the Metis family.
                         </p>
                         <div className='flex justify-center md:justify-start'>
                             <button className='flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
-                                <span className='text-xs font-semibold'>
+                                <span className='text-[12.5px] font-semibold'>
                                     BUY FROSKA
                                 </span>
                                 <TiArrowRight className='flex items-center' size={20} />

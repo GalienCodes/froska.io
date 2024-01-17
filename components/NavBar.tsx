@@ -47,7 +47,7 @@ const NavBar = () => {
                 const isActive = path === pathname;
                 return (
                   <Link key={path} href={`#${path.substring(1)}`}
-                    className=' md:block hidden font-normal text-[#1F1E1E] text-[12px] dark:text-[#FFFFFF]'
+                    className=' md:block hidden font-normal text-[#1F1E1E] text-[12.5px] dark:text-[#FFFFFF]'
                   >
                     {name}
                   </Link>
@@ -55,7 +55,7 @@ const NavBar = () => {
               })}
               <div className='flex items-center gap-6'>
                 <button className=' md:flex hidden bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
-                  <span className='text-xs font-semibold'>
+                  <span className='text-[12.5px] font-semibold'>
                     BUY FROSKA
                   </span>
                   <TiArrowRight className='flex items-center' size={20} />
@@ -76,7 +76,7 @@ const NavBar = () => {
                   <MdClose className='text-4xl dark:text-[#FFFFFF] text-[#1F1E1E]' onClick={() => handleOpened()} />
                 </div>
                 <button className='flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2   rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
-                  <span className='text-xs font-semibold'>
+                  <span className='text-[12.5px] font-semibold'>
                     BUY FROSKA
                   </span>
                   <TiArrowRight className='flex items-center' size={20} />

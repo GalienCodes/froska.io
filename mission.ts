@@ -46,8 +46,7 @@ export const distribution = [
         name: "Liquidity Burn: 40% (40 Million Tokens)",
         mainDescription: "40% of the tokens (40 million) will be pooled to enhance initial liquidity, contributing to price stability and long-term sustainability.",
         description:"",
-        points: [],
-        subPoints: []
+       
     },
     {
         id: 2,
@@ -56,25 +55,36 @@ export const distribution = [
         description:"",
         details:[
             {
-                title:"Metis Community Allocation: 10% (10 Million Tokens)",
-                desc:"Starting from within, 10 million tokens will be airdropped to Metis community contributors, native developers, and dedicated members, acknowledging their vital role in the ecosystem's growth."
+                title:"Metis Community Allocation (10 Million Tokens)",
+                desc:"Starting from within, 10 million tokens will be airdropped to Metis community contributors, native developers, and dedicated members, acknowledging their vital role in the ecosystem's growth.",
+                points: ["MIP2/ MIP3 CEG voters", "Nuvo Contributors"],
+                subPoints: [
+                    'Nuvo Participation Badge Holders',
+                    'Metis advocates',
+                    'Nuvo Festive Spirit Holders',
+                    'Nuvo AMA badge owners'
+                ]
             },
             {
                 title:"Community Determined Future Rewards: 20% (20 Million Tokens)",
                 desc:"The remaining 20 million tokens from the Airdrop pool will serve as rewards for Metis users, Froska holders and contributors, incentivizing ongoing contributions and ensuring sustained growth"
             }
         ],
-        points: [],
-        subPoints: []
+       
     },
 
     {
         id: 3,
         name: "Marketing and Development: 10% (10 Million Tokens)",
         mainDescription: "To secure FROSKA's longevity and advancement, 10 million tokens will be earmarked. This reserve will support crucial aspects such as marketing initiatives, future development endeavors, strategic partnerships, and grants aimed at fostering widespread adoption.",
-        description:"Early Contributors, Builders and KOLs: 20% (20 Million Tokens)The vibrant Froska team, Community Verified Project Builders(CVPs), Mouthpieces of our ecosystem (KOLs) and members from our very own OG Metis community, is dedicated to maintaining a safe and welcoming ecosystem.",
-        points: [],
-        subPoints: []
+       
+    },
+    {
+        id: 4,
+        name: "Early Contributors, Builders and KOLs: 20% (20 Million Tokens)",
+        mainDescription: "The vibrant Froska team, Community Verified Project Builders(CVPs), Mouthpieces of our ecosystem (KOLs) and members from our very own OG Metis community, is dedicated to maintaining a safe and welcoming ecosystem.",
+       
     }
+
 
 ]

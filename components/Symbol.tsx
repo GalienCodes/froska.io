@@ -9,7 +9,7 @@ const Symbol = () => {
                 <div className='flex flex-col sm:flex-row justify-between items-center'>
                     <div className='text-[#1F1E1E] w-full sm:w-1/2'>
                         <h1 className='font-GilroyBold text-lg md:text-xl'>Symbol Of Vigilance & Reward</h1>
-                        <p className='font-GilroyRegular text-xs w-full md:w-11/12 pt-4 md:pt-2'>FROSKA embodies our values—watchfulness, loyalty, and promise. Raised in an environment of care, FROSKA signifies
+                        <p className='font-GilroyRegular text-[12.5px] w-full md:w-11/12 pt-4 md:pt-2'>FROSKA embodies our values—watchfulness, loyalty, and promise. Raised in an environment of care, FROSKA signifies
                             our commitment to overseeing and rewarding contributions within our community.
                         </p>
                     </div>

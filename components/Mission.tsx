@@ -23,7 +23,7 @@ const Mission = () => {
                                     {id}
                                 </h1>
 
-                                <p className='mt-[-26px] dark:text-[#FFFFFF] text-[#242529] text-xs'>
+                                <p className='mt-[-26px] dark:text-[#FFFFFF] text-[#242529] text-[12.5px]'>
                                     {description}
                                 </p>
                             </div>)

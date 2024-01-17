@@ -14,7 +14,7 @@ const ClaimModal = () => {
     const [founderAccount] = useGlobalState('founderAccount');
     const [hasClaimed] = useGlobalState('hasClaimed');
     const [isEligible] = useGlobalState('isEligible');
-    
+
     const handleModal = () => {
         setGlobalState("modal", !modal);
         setGlobalState("initDepositAmount", '')
@@ -55,8 +55,8 @@ const ClaimModal = () => {
         checkHasClaimed()
         checkContractBalance()
         checkIsEligible()
-    }, [modal, connectedAccount,contractBalance])
- 
+    }, [modal, connectedAccount, contractBalance])
+
 
     return (
         <div className={modal ? 'block fixed top-0 right-0 bottom-0 rounded-tl-md shadow-xl  w-5/6 max-w-xl overflow-hidden bg-[#F3F4F5] dark:bg-[#1F1E1E] overflow-y-auto transition-transform duration-300' : 'hidden'}>
@@ -67,13 +67,13 @@ const ClaimModal = () => {
                     </div>
                     {connectedAccount ?
                         <button className='cusor-none flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2.5   rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
-                            <span className='text-xs font-semibold'>
+                            <span className='text-[12.5px] font-semibold'>
                                 {truncate(connectedAccount, 6, 8, 17)}
                             </span>
                         </button>
                         :
                         <button onClick={connectWallet} className='flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2.5   rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
-                            <span className='text-xs font-semibold'>
+                            <span className='text-[12.5px] font-semibold'>
                                 Connect
                             </span>
                         </button>
@@ -84,9 +84,8 @@ const ClaimModal = () => {
                 <div className='flex justify-between items-center'>
                     <h1 className='font-GilroyBold text-lg md:text-xl '>Requirements</h1> <p className='font-GilroyRegular'>Bal: <span className='font-GilroyMedium'>{contractBalance} Froska</span></p>
                 </div>
-                <p className='font-GilroyRegular text-xs w-full md:w-11/12 pt-4 md:pt-2'>
-                    Only <span className='font-GilroyBold '>registered </span> Metis contributors are allowed to claim.
-                    As a token of appreciation, you've been awarded 6671 Froska tokens. Act fast – the claim deadline is two weeks! Your dedication fuels the Froska community's success.
+                <p className='font-GilroyRegular text-[12.5px] w-full md:w-11/12 pt-4 md:pt-2'>
+                    Only <span className='font-GilroyBold '>MIP2/ MIP3 CEG voters, Metis Advocates and Nuvo Contributors: Nuvo AMA badge holders, Nuvo Festive Spirit participants, Nuvo Participation Badge holders</span> are eligible to claim FROSKA airdrop in this round. Claim end on 5th Feb 2024. Not eligible? There are 20 Million Froska allocated for future rewards,  follow Froska Twitter and join Telegram Community to stay updated.
                 </p>
                 {founderAccount.length != 0 ?
                     founderAccount === connectedAccount ? (
@@ -101,7 +100,7 @@ const ClaimModal = () => {
                                     className='px-3 w-full bg-transparent outline-none' />
                                 <button
                                     type='submit' className='flex cursor-pointer dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-tr-md rounded-br-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
-                                    <span className='text-xs font-semibold'>
+                                    <span className='text-[12.5px] font-semibold'>
                                         Deposit
                                     </span>
                                 </button>
@@ -109,7 +108,7 @@ const ClaimModal = () => {
                             {Number(contractBalance) != 0 ?
                                 <button onClick={handleWithdrawl}
                                     type='submit' className='flex justify-center cursor-pointer dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 w-full md:w-11/12 text-center rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
-                                    <span className='text-xs text-center font-semibold'>
+                                    <span className='text-[12.5px] text-center font-semibold'>
                                         Withdraw All
                                     </span>
                                 </button>
@@ -118,30 +117,30 @@ const ClaimModal = () => {
                     )
                         :
                         <div className='flex items-center pt-2.5'>
-                            {isEligible === true?
-                           ( hasClaimed === true ?
+                            {isEligible === true ?
+                                (hasClaimed === true ?
+                                    (<button
+                                        disabled
+                                        className='flex dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
+                                        <span className='text-[12.5px] font-semibold'>
+                                            Already Caimed
+                                        </span>
+                                        <GiDropEarrings className='flex items-center ml-2' size={18} />
+                                    </button>)
+                                    :
+                                    (<button
+                                        onClick={handleAirdropClaim}
+                                        className='flex cursor-pointer dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
+                                        <span className='text-[12.5px] font-semibold'>
+                                            Claim Airdrop
+                                        </span>
+                                        <GiDropEarrings className='flex items-center ml-2' size={18} />
+                                    </button>)) :
                                 (<button
                                     disabled
                                     className='flex dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
-                                    <span className='text-xs font-semibold'>
-                                        Already Caimed
-                                    </span>
-                                    <GiDropEarrings className='flex items-center ml-2' size={18} />
-                                </button>)
-                                :
-                                (<button
-                                    onClick={handleAirdropClaim}
-                                    className='flex cursor-pointer dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
-                                    <span className='text-xs font-semibold'>
-                                        Claim Airdrop
-                                    </span>
-                                    <GiDropEarrings className='flex items-center ml-2' size={18} />
-                                </button>)):
-                                (<button
-                                    disabled
-                                    className='flex dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
-                                    <span className='text-xs font-semibold'>
-                                       You're Not Eligible To Claim
+                                    <span className='text-[12.5px] font-semibold'>
+                                        You're Not Eligible To Claim
                                     </span>
                                     <GiDropEarrings className='flex items-center ml-2' size={18} />
                                 </button>)
@@ -149,12 +148,12 @@ const ClaimModal = () => {
                         </div>
                     :
                     <div className='flex items-center pt-2.5'>
-                            {isEligible === true?
-                           ( hasClaimed === true ?
+                        {isEligible === true ?
+                            (hasClaimed === true ?
                                 (<button
                                     disabled
                                     className='flex dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
-                                    <span className='text-xs font-semibold'>
+                                    <span className='text-[12.5px] font-semibold'>
                                         Already Caimed
                                     </span>
                                     <GiDropEarrings className='flex items-center ml-2' size={18} />
@@ -163,21 +162,21 @@ const ClaimModal = () => {
                                 (<button
                                     onClick={handleAirdropClaim}
                                     className='flex cursor-pointer dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
-                                    <span className='text-xs font-semibold'>
+                                    <span className='text-[12.5px] font-semibold'>
                                         Claim Airdrop
                                     </span>
                                     <GiDropEarrings className='flex items-center ml-2' size={18} />
-                                </button>)):
-                                (<button
-                                    disabled
-                                    className='flex dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
-                                    <span className='text-xs font-semibold'>
-                                       You're Not Eligible To Claim
-                                    </span>
-                                    <GiDropEarrings className='flex items-center ml-2' size={18} />
-                                </button>)
-                            }
-                        </div>
+                                </button>)) :
+                            (<button
+                                disabled
+                                className='flex dark:bg-[#FFFFFF] bg-[#1F1E1E] px-3 py-2 rounded-md dark:text-[#242529] text-[#FFFFFF]  items-center'>
+                                <span className='text-[12.5px] font-semibold'>
+                                    You're Not Eligible To Claim
+                                </span>
+                                <GiDropEarrings className='flex items-center ml-2' size={18} />
+                            </button>)
+                        }
+                    </div>
                 }
 
 

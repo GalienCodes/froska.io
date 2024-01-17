@@ -3,6 +3,7 @@ import Image from 'next/image'
 import FroskaAirdrop from '../assets/froskaairdrop.png'
 import { GiDropEarrings } from "react-icons/gi";
 import { setGlobalState, useGlobalState } from '@/store';
+import { TiArrowRight } from 'react-icons/ti';
 
 
 const Claim = () => {
@@ -13,17 +14,16 @@ const Claim = () => {
             <div className='mx-6 md:mx-4 xl:mx-0'>
                 <div className='flex flex-col sm:flex-row justify-between items-center'>
                     <div className='text-[#1F1E1E] w-full sm:w-1/2'>
-                        <h1 className='font-GilroyBold text-lg md:text-xl'>Clain Airdrop</h1>
-                        <p className='font-GilroyRegular text-xs  w-full md:w-11/12 pt-4 md:pt-2'>
-                            As a token of appreciation, you've been awarded <span className='font-GilroyBold '>6671 Froska tokens</span>.
-                            Act fast – the claim deadline is <span className='font-GilroyBold '>two weeks</span>! Your dedication fuels the Froska community's success.
+                        <h1 className='font-GilroyBold text-lg md:text-xl'>Claim Airdrop</h1>
+                        <p className='font-GilroyRegular text-[12.5px]  w-full md:w-11/12 pt-4 md:pt-2'>
+                            As a token of appreciation, FROSKA is rewarding contributors of the entire Metis ecosystem. Check eligibility here!.
                         </p>
                         <div className='mt-4 text-center sm:text-left w-full lg:w-2/5'>
                             <button onClick={() => setGlobalState("modal", !modal)} className='flex cursor-pointer bg-[#242529] px-3 py-2 rounded-md text-[#FFFFFF]  items-center'>
-                                <span className='text-xs font-semibold'>
-                                    Claim Airdrop
+                                <span className='text-[12.5px] font-semibold'>
+                                    Check Eligibility
                                 </span>
-                                <GiDropEarrings className='flex items-center ml-2' size={18} />
+                                <TiArrowRight className='flex items-center ml-2' size={18} />
                             </button>
                         </div>
                     </div>

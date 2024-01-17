@@ -19,7 +19,7 @@ const Tokenomics = () => {
                             return (
                                 <div key={index} className={`flex items-center gap-5  ${index === tokenomicItems.length - 1 ? '' : 'pb-5'}`} >
                                     <Image src={footstep} alt='footstep' width={16} height={16} />
-                                    <p className='font-GilroyMedium text-xs text-left'>{name}</p>
+                                    <p className='font-GilroyMedium text-[12.5px]text-left'>{name}</p>
                                 </div>
                             )
                         })}

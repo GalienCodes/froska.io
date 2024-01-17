@@ -12,10 +12,10 @@ const LegacyVision = () => {
                     </div>
                     <div className='tex-[#F3F4F5] w-full sm:w-1/2 mt-10 sm:mt-0 '>
                         <h1 className='font-GilroyBold text-lg md:text-xl'>Legacy and vision</h1>
-                        <p className='font-GilroyRegular text-xs w-full pt-7 md:pt-2'>
+                        <p className='font-GilroyRegular text-[12.5px] w-full pt-7 md:pt-2'>
                             FROSKA’s legacy shapes our journey, reminding us of our collective goal: to foster a secure and rewarding ecosystem for all within Metis.
                         </p>
-                        <p className='font-GilroyRegular text-xs w-full pt-2' id='Mission'>
+                        <p className='font-GilroyRegular text-[12.5px] w-full pt-2' id='Mission'>
                             FROSKA is Metis’ CEO Elena’s cat. Grown in a setting of love and generosity, FROSKA promises to watch quietly and reward
                         </p>
                     </div>
