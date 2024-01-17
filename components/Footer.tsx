@@ -6,6 +6,7 @@ import logo from '../assets/froska1.svg'
 import Logowhite from '../assets/Logowhite.svg'
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaTelegram } from "react-icons/fa";
+import Link from 'next/link';
 
 const Footer = () => {
     const date = new Date().getFullYear();
@@ -23,20 +24,20 @@ const Footer = () => {
                                 <span className='font-GilroyBold ml-1'>froska</span> reward!
                             </h2>
                         </div>
-                        <ul className="py-2">
-                            <li className="mb-1.5">About us</li>
-                            <li className="mb-1.5">Feedback</li>
-                            <li className="mb-1.5">Community</li>
+                        <ul className="py-2 flex flex-col">
+                            <Link href={'/'} className="mb-1.5">About us</Link>
+                            <Link href={'/'} className="mb-1.5">Feedback</Link>
+                            <Link href={'/https://t.me/metisfroska'} target='_blank' className="mb-1.5">Community</Link>
                         </ul>
-                        <ul className="hidden md:block py-2">
-                            <li className="mb-1.5">Help & Support </li>
-                            <li className="mb-1.5">Safety & Security </li>
-                            <li className="mb-1.5">Froska Foundation</li>
+                        <ul className="hidden md:flex flex-col py-2">
+                            <Link href={'/https://t.me/metisfroska'} target='_blank' className="mb-1.5">Help & Support </Link>
+                            <Link href={'/'} className="mb-1.5">Safety & Security </Link>
+                            <Link href={'/'} className="mb-1.5">Froska Foundation</Link>
                         </ul>
-                        <ul className="py-2">
-                            <li className="mb-1.5">Help & Support </li>
-                            <li className="mb-1.5">Safety & Security </li>
-                            <li className="mb-1.5">Froska Foundation</li>
+                        <ul className="py-2 flex flex-col">
+                            <Link href={'/https://t.me/metisfroska'} target='_blank' className="mb-1.5">Help & Support </Link>
+                            <Link href={'/'} className="mb-1.5">Safety & Security </Link>
+                            <Link href={'/'}className="mb-1.5">Froska Foundation</Link>
                         </ul>
                     </div>
                 </div>
@@ -47,10 +48,10 @@ const Footer = () => {
                         <h2 className='text-left'> &copy; {date - 1} - {date} Froska</h2>
                         <div className='flex gap-4 items-center justify-center '>
                             <a href="https://x.com/metisfroska?s=21&t=R1Npp91OsViMHyM3gdEGVQ" target='_blank'>
-                                <FaSquareXTwitter className="text-center cursor-pointer" size={20} />
+                                <FaSquareXTwitter className="text-center cursor-pointer" size={22} />
                             </a>
                             <a href="https://t.me/metisfroska" target='_blank'>
-                                <FaTelegram className="text-center cursor-pointer" size={20} />
+                                <FaTelegram className="text-center cursor-pointer" size={22} />
                             </a>
                         </div>
                     </div>
