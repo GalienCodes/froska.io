@@ -12,16 +12,16 @@ import { IoMenu } from "react-icons/io5";
 import { MdClose, MdOutlineLogout } from 'react-icons/md';
 
 const navItems: { [key: string]: { name: string } } = {
-  "Tokenomics": {
+  "/Tokenomics": {
     name: 'Tokenomics'
   },
-  "How to buy": {
+  "/How to buy": {
     name: 'How to buy'
   },
-  "Mission": {
+  "/Mission": {
     name: 'Mission'
   },
-  "Airdrop": {
+  "/Airdrop": {
     name: 'Airdrop'
   },
 }
