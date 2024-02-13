@@ -27,17 +27,17 @@ const Footer = () => {
                         <ul className="py-2 flex flex-col">
                             <Link href={'/'} className="mb-1.5">About us</Link>
                             <Link href={'/'} className="mb-1.5">Feedback</Link>
-                            <Link href={'/https://t.me/metisfroska'} target='_blank' className="mb-1.5">Community</Link>
+                            <Link href={'https://t.me/metisfroska'} target='_blank' className="mb-1.5">Community</Link>
                         </ul>
                         <ul className="hidden md:flex flex-col py-2">
-                            <Link href={'/https://t.me/metisfroska'} target='_blank' className="mb-1.5">Help & Support </Link>
-                            <Link href={'/'} className="mb-1.5">Safety & Security </Link>
-                            <Link href={'/'} className="mb-1.5">Froska Foundation</Link>
+                            <Link href={'#Mission'} className="mb-1.5">Tokenomics </Link>
+                            <Link href={'#Mission'} className="mb-1.5">Mission</Link>
+                            <Link href={'#Airdrop'} className="mb-1.5">Airdrop</Link>
                         </ul>
                         <ul className="py-2 flex flex-col">
-                            <Link href={'/https://t.me/metisfroska'} target='_blank' className="mb-1.5">Help & Support </Link>
+                            <Link href={'https://t.me/metisfroska'} target='_blank' className="mb-1.5">Help & Support </Link>
                             <Link href={'/'} className="mb-1.5">Safety & Security </Link>
-                            <Link href={'/'}className="mb-1.5">Froska Foundation</Link>
+                            <Link href={'/'} className="mb-1.5">Froska Foundation</Link>
                         </ul>
                     </div>
                 </div>
