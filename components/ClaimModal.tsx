@@ -17,7 +17,6 @@ const ClaimModal = () => {
 
     const handleModal = () => {
         setGlobalState("modal", !modal);
-        setGlobalState("initDepositAmount", '')
     };
     const handleSubmit = async (e: { preventDefault: () => void }) => {
         e.preventDefault();
