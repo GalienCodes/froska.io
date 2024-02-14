@@ -55,22 +55,6 @@ const ClaimModal = () => {
         }
     }
 
-    useEffect(() => {
-
-        const loadFuncs = async () => {
-          await isWalletConnected()
-          await FroskaContract()
-          await AirdropContract()
-          await getFounder()
-          await checkHasClaimed()
-          await checkContractBalance()
-          await checkIsEligible()
-        }
-    
-        loadFuncs()
-    
-      }, [modal, connectedAccount, contractBalance])
-
     return (
         <div className={modal ? 'block fixed top-0 right-0 bottom-0 rounded-tl-md shadow-xl  w-5/6 max-w-xl overflow-hidden bg-[#F3F4F5] dark:bg-[#1F1E1E] overflow-y-auto transition-transform duration-300' : 'hidden'}>
             {modal ? (
