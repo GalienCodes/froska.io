@@ -54,12 +54,14 @@ const NavBar = () => {
                 )
               })}
               <div className='flex items-center gap-6'>
-                <button className=' md:flex hidden bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
-                  <span className='text-[12.5px] font-semibold'>
-                    BUY FROSKA
-                  </span>
-                  <TiArrowRight className='flex items-center' size={20} />
-                </button>
+                <Link href="https://hermes.maiadao.io/#/add/METIS/0x920912668fE3B30F2f286E913a5F3c974e002aEB/false" target='_blank'>
+                  <button className=' md:flex hidden bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
+                    <span className='text-[12.5px] font-semibold'>
+                      BUY FROSKA
+                    </span>
+                    <TiArrowRight className='flex items-center' size={20} />
+                  </button>
+                </Link>
                 <ThemeToggle />
                 <div className='md:hidden block'>
                   <IoMenu className='text-3xl dark:text-[#FFFFFF] text-[#1F1E1E]' onClick={() => handleOpened()} />
@@ -75,12 +77,14 @@ const NavBar = () => {
                 <div className='md:hidden  block'>
                   <MdClose className='text-4xl dark:text-[#FFFFFF] text-[#1F1E1E]' onClick={() => handleOpened()} />
                 </div>
-                <button className='flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2   rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
-                  <span className='text-[12.5px] font-semibold'>
-                    BUY FROSKA
-                  </span>
-                  <TiArrowRight className='flex items-center' size={20} />
-                </button>
+                <Link href="https://hermes.maiadao.io/#/add/METIS/0x920912668fE3B30F2f286E913a5F3c974e002aEB/false" target='_blank'>
+                  <button className='flex bg-[#242529] dark:bg-[rgb(255,255,255)] px-3 py-2   rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
+                    <span className='text-[12.5px] font-semibold'>
+                      BUY FROSKA
+                    </span>
+                    <TiArrowRight className='flex items-center' size={20} />
+                  </button>
+                </Link>
               </div>
             ) : ''}
             <div className='gap-3 flex flex-col py-6 px-6 '>
