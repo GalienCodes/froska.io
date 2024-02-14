@@ -12,32 +12,9 @@ import LoadData from '@/components/LoadData'
 import Mission from '@/components/Mission'
 import Symbol from '@/components/Symbol'
 import Tokenomics from '@/components/Tokenomics'
-import { useGlobalState } from '@/store';
-import { AirdropContract, FroskaContract, checkContractBalance, checkHasClaimed, checkIsEligible, getFounder, isWalletConnected } from '@/web3Services';
-import { useEffect } from 'react';
 
-export default function Home() {
-  const [modal] = useGlobalState("modal")
-  const [contractBalance] = useGlobalState("contractBalance")
-  const [initDepositAmount] = useGlobalState("initDepositAmount")
-  const [connectedAccount] = useGlobalState('connectedAccount');
-  const [founderAccount] = useGlobalState('founderAccount');
 
-  useEffect(() => {
-
-    const loadFuncs = async () => {
-      await isWalletConnected()
-      await FroskaContract()
-      await AirdropContract()
-      await getFounder()
-      await checkHasClaimed()
-      await checkContractBalance()
-      await checkIsEligible()
-    }
-
-    loadFuncs()
-
-  }, [modal, connectedAccount, contractBalance])
+export default function Home() { 
   return (
     <div >
       <ClaimModal />
