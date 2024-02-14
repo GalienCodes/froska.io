@@ -106,7 +106,6 @@ const AirdropContract = async () => {
     return AirdropContract;
 };
 
-
 const depositAmount = async (amount: string) => {
     const connectedAccount = getGlobalState('connectedAccount');
     amount = toWei(amount.toString(), 'ether');
@@ -120,7 +119,7 @@ const depositAmount = async (amount: string) => {
         const transaction1 = await froskaContract?.methods.approve(
             AirdropAddress.Airdrop,
             amount
-        ).send({ from: connectedAccount });
+        ).send({ from: connectedAccount,value:amount});
         // Deposit Froska tokens
         const transaction2 = await airdropContract?.methods.depositAirdropFunds(
             amount)
