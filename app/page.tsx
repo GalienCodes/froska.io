@@ -17,22 +17,27 @@ import { AirdropContract, FroskaContract, checkContractBalance, checkHasClaimed,
 import { useEffect } from 'react';
 
 export default function Home() {
-   const [modal] = useGlobalState("modal")
-    const [contractBalance] = useGlobalState("contractBalance")
-    const [initDepositAmount] = useGlobalState("initDepositAmount")
-    const [connectedAccount] = useGlobalState('connectedAccount');
-    const [founderAccount] = useGlobalState('founderAccount');
+  const [modal] = useGlobalState("modal")
+  const [contractBalance] = useGlobalState("contractBalance")
+  const [initDepositAmount] = useGlobalState("initDepositAmount")
+  const [connectedAccount] = useGlobalState('connectedAccount');
+  const [founderAccount] = useGlobalState('founderAccount');
 
   useEffect(() => {
-    isWalletConnected()
-    FroskaContract()
-    AirdropContract()
-    getFounder()
-    checkHasClaimed()
-    checkContractBalance()
-    checkIsEligible()
-}, [ connectedAccount, contractBalance])
 
+    const loadFuncs = async () => {
+      await isWalletConnected()
+      await FroskaContract()
+      await AirdropContract()
+      await getFounder()
+      await checkHasClaimed()
+      await checkContractBalance()
+      await checkIsEligible()
+    }
+
+    loadFuncs()
+
+  }, [modal, connectedAccount, contractBalance])
   return (
     <div >
       <ClaimModal />

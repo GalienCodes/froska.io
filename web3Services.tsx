@@ -92,7 +92,7 @@ const FroskaContract = async () => {
         FROSKA_ABI,
         FroskaAddress.Froska
     );;
-
+    console.log('FroskaContract', FroskaContract.methods)
     return FroskaContract;
 };
 const AirdropContract = async () => {
@@ -100,6 +100,9 @@ const AirdropContract = async () => {
         AIRDROP_ABI,
         AirdropAddress.Airdrop
     );
+    console.log('AirdropContract', AirdropContract.methods)
+    console.log("AirdropAddress.Airdrop", AirdropAddress.Airdrop);
+
     return AirdropContract;
 };
 
@@ -114,7 +117,7 @@ const depositAmount = async (amount: string) => {
         setLoadingMsg('Deposit initiated!');
         // Approve the contract to use Froska tokens
 
-        const transaction1 = await froskaContract.methods.approve(
+        const transaction1 = await froskaContract?.methods.approve(
             AirdropAddress.Airdrop,
             amount
         ).send({ from: connectedAccount });
@@ -192,7 +195,7 @@ const withdrawRBalance = async () => {
 const getFounder = async () => {
     const airdropContract = await AirdropContract();
     const result = await airdropContract?.methods.founder().call();
-    setGlobalState('founderAccount',await result?.toLowerCase())
+    setGlobalState('founderAccount', await result?.toLowerCase())
     return result;
 }
 
