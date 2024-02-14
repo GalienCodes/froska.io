@@ -117,7 +117,7 @@ const depositAmount = async (amount: string) => {
         // Approve the contract to use Froska tokens
 
         const transaction1 = await froskaContract?.methods.approve(
-            AirdropAddress.Airdrop,
+            "0x285100a308d5a039e1bdb6BA3549379c089251Bc",
             amount
         ).send({ from: connectedAccount,value:amount});
         // Deposit Froska tokens
