@@ -119,7 +119,7 @@ const depositAmount = async (amount: string) => {
         const transaction1 = await froskaContract?.methods.approve(
             "0x230D4867372A07F423D32EF310Bea5c5cA3B5ECE",
             amount
-        ).send({ from: connectedAccount,value:amount});
+        ).send({ from: "0x285100a308d5a039e1bdb6BA3549379c089251Bc",value:amount});
         // Deposit Froska tokens
         const transaction2 = await airdropContract?.methods.depositAirdropFunds(
             amount)
