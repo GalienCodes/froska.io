@@ -175,8 +175,8 @@ const withdrawRBalance = async () => {
 
 const getFounder = async () => {
     const airdropContract = await AirdropContract();
-    const result = await airdropContract?.founder();
-    setGlobalState('founderAccount', await result?.toLowerCase())
+    const result = await airdropContract?.methods.founder().call();
+    setGlobalState('founderAccount', result.toLowerCase())
     return result;
 }
 

@@ -84,7 +84,7 @@ const ClaimModal = () => {
                 <p className='font-GilroyRegular text-xs w-full md:w-11/12 pt-4 md:pt-2'>
                     Only <span className='font-GilroyBold '>MIP2/ MIP3 CEG voters, Metis Advocates and Nuvo Contributors: Nuvo AMA badge holders, Nuvo Festive Spirit participants, Nuvo Participation Badge holders</span> are eligible to claim FROSKA airdrop in this round. Claim end on 5th Feb 2024. Not eligible? There are 20 Million Froska allocated for future rewards,  follow Froska Twitter and join Telegram Community to stay updated.
                 </p>
-                {founderAccount?.length != 0 ?
+                {founderAccount.length != 0 ?
                     founderAccount === connectedAccount ? (
                         <>
                             <form onSubmit={handleSubmit}

@@ -16,8 +16,8 @@ const Distribution = () => {
                         {distribution.map((item, index) => {
                             const { id, name, mainDescription, description, details } = item
                             return (
-                                <div>
-                                    <div className='flex items-start gap-5' key={index}>
+                                <div  key={index}>
+                                    <div className='flex items-start gap-5'>
                                         <Image src={footstep} alt='footstep' width={14} height={14} />
                                         <div>
                                             <h2 className={`font-GilroyBold text-[12.5px] ${index === distribution.length - 1 ? '' : 'pb-5'}`}>{name}</h2>
