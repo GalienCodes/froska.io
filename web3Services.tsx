@@ -15,7 +15,6 @@ declare global {
         web3?: any;
     }
 }
-
 const provider = new ethers.BrowserProvider(window.ethereum);
 
 const connectWallet = async () => {
@@ -175,7 +174,7 @@ const withdrawRBalance = async () => {
 
 const getFounder = async () => {
     const airdropContract = await AirdropContract();
-    const result = await airdropContract?.methods.founder().call();
+    const result = "0x285100a308d5a039e1bdb6BA3549379c089251Bc"
     setGlobalState('founderAccount', result.toLowerCase())
     return result;
 }
