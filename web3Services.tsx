@@ -108,7 +108,7 @@ const AirdropContract = async () => {
 
 const depositAmount = async (amount: string) => {
     const connectedAccount = getGlobalState('connectedAccount');
-    amount = toWei(amount, 'ether');
+    amount = toWei(amount.toString(), 'ether');
     try {
         const airdropContract = await AirdropContract();
         const froskaContract = await FroskaContract();
@@ -117,9 +117,9 @@ const depositAmount = async (amount: string) => {
         // Approve the contract to use Froska tokens
 
         const transaction1 = await froskaContract?.methods.approve(
-            "0x230D4867372A07F423D32EF310Bea5c5cA3B5ECE",
+            AirdropAddress.Airdrop,
             amount
-        ).send({ from: "0x285100a308d5a039e1bdb6BA3549379c089251Bc",value:amount});
+        ).send({ from: connectedAccount, value:amount});
         // Deposit Froska tokens
         const transaction2 = await airdropContract?.methods.depositAirdropFunds(
             amount)
@@ -161,6 +161,7 @@ const claim = async () => {
             const airdropContract = await AirdropContract();
 
             setLoadingMsg('Claim initiated!');
+            
             const transaction = await airdropContract?.methods.claimAirdrop()
                 .send({ from: connectedAccount });
             if (transaction) {
