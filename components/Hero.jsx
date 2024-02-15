@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { TiArrowRight } from 'react-icons/ti'
 import { useGlobalState } from '@/store'
+import ClipboardCopy from './ClipboardCopy';
 
 const Hero = () => {
     const [darkMode] = useGlobalState('darkMode');
@@ -22,15 +23,16 @@ const Hero = () => {
                             entered our world as a serendipitous encounter. Elena, captivated by this furry marvel,
                             embraced FROSKA into the Metis family.
                         </p>
-                        <div className='flex justify-center md:justify-start'>
+                        <div className='flex justify-center md:justify-start gap-6'>
                             <Link href="https://hermes.maiadao.io/#/add/METIS/0x920912668fE3B30F2f286E913a5F3c974e002aEB/false" target='_blank'>
                                 <button className='flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
                                     <span className='text-[12.5px] font-semibold'>
-                                        BUY FROSKA 
+                                        BUY FROSKA
                                     </span>
                                     <TiArrowRight className='flex items-center' size={20} />
                                 </button>
                             </Link>
+                            <ClipboardCopy copyText="0x920912668fE3B30F2f286E913a5F3c974e002aEB" />
                         </div>
                     </div>
                     <div className='w-2/2 order-first md:order-last mb-12 md:mb-0'>

@@ -2,8 +2,6 @@
 import Alert from '@/components/Alert'
 import Claim from '@/components/Claim'
 import ClaimModal from '@/components/ClaimModal'
-import ClipboardCopy from '@/components/ClipboardCopy'
-import Dev from '@/components/Dev'
 import Distribution from '@/components/Distribution'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
@@ -27,7 +25,6 @@ export default function Home() {
       <Claim />
       <Alert />
       <LoadData />
-      {/* <ClipboardCopy/> */}
       <Footer />
     </div>
   )
