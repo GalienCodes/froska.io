@@ -26,7 +26,7 @@ const Hero = () => {
                             <Link href="https://hermes.maiadao.io/#/add/METIS/0x920912668fE3B30F2f286E913a5F3c974e002aEB/false" target='_blank'>
                                 <button className='flex bg-[#242529] dark:bg-[#FFFFFF] px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
                                     <span className='text-[12.5px] font-semibold'>
-                                        BUY FROSKA
+                                        BUY FROSKA -
 
                                     </span>
                                     <TiArrowRight className='flex items-center' size={20} />
