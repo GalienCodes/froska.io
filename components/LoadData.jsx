@@ -1,4 +1,3 @@
-'use client';
 import { useGlobalState } from '@/store';
 import Loader from './Loader';
 

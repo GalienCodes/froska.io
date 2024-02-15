@@ -9,8 +9,11 @@ import FroskaAddress from "./abis/froskaAddress.json"
 import { ethers } from 'ethers';
 
 // Check if 'ethereum' and 'window' are available in the global scope
-
-const { ethereum } = window;
+   
+let ethereum;
+if (typeof window !== 'undefined' && window.ethereum) {
+    ethereum = window.ethereum;
+}
 
 const connectWallet = async () => {
     try {
