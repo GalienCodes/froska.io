@@ -21,7 +21,7 @@ const Footer = () => {
                             <Image src={darkMode ? Logowhite : logo} alt='froska' height={100} width={90} />
                             <h2 className='pt-4'>
                                 <span className='font-GilroyBold '>froska</span>  sees!
-                                <span className='font-GilroyBold ml-1'>froska</span> reward!
+                                <span className='font-GilroyBold ml-1'>froska</span> rewards!
                             </h2>
                         </div>
                         <ul className="py-2 flex flex-col">
