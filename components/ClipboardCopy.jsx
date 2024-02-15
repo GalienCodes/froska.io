@@ -5,9 +5,9 @@ import { LuCopyCheck } from "react-icons/lu";
 import copy from 'copy-to-clipboard';
 
 const ClipboardCopy = () => {
-    const [copied, setCopiedId] = useState<string>();
-    const [copiedText, setCopiedText] = useState<string>();
-    const [copiedImage, setCopiedImage] = useState<string>();
+    const [copied, setCopiedId] = useState();
+    const [copiedText, setCopiedText] = useState();
+    const [copiedImage, setCopiedImage] = useState();
 
     useEffect(() => {
         (async function run() {

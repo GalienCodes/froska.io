@@ -1,11 +1,5 @@
 import { froskaMission } from '@/mission';
 
-interface Mission {
-    id: number,
-    title: string,
-    description: string
-}
-
 const Mission = () => {
     return (
         <div className='max-w-5xl mx-auto  pt-20 pb-10 sm:pb-20 '>
@@ -15,7 +9,7 @@ const Mission = () => {
                 </h2>
 
                 <div className=' pt-6 md:pt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-12  justify-between  items-start'>
-                    {froskaMission.map((item: Mission) => {
+                    {froskaMission.map((item) => {
                         const { id, title, description } = item;
                         return (
                             <div className='font-GilroyRegular' key={id}>

@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { IoMenu } from "react-icons/io5";
 import { MdClose, MdOutlineLogout } from 'react-icons/md';
 
-const navItems: { [key: string]: { name: string } } = {
+const navItems = {
   "/Tokenomics": {
     name: 'Tokenomics'
   },

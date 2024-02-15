@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "web3Services.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "web3Services.js", "app/layout.jsx", "app/page.jsx", "components/Alert.jsx", "components/Claim.jsx", "components/ClaimModal.jsx", "components/ClipboardCopy.jsx", "components/Dev.jsx", "components/Distribution.jsx", "components/Footer.jsx", "components/Hero.jsx", "components/LegacyVision.jsx", "components/LoadData.jsx", "components/Loader.jsx", "components/Mission.jsx", "components/NavBar.jsx", "components/Symbol.jsx", "components/ThemeToggle.jsx", "components/Tokenomics.jsx"],
   "exclude": ["node_modules"]
 }
