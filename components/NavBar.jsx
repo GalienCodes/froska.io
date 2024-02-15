@@ -12,16 +12,16 @@ import { IoMenu } from "react-icons/io5";
 import { MdClose, MdOutlineLogout } from 'react-icons/md';
 
 const navItems = {
-  "/Tokenomics": {
+  "Tokenomics": {
     name: 'Tokenomics'
   },
-  "/How to buy": {
+  "https://hermes.maiadao.io/#/add/METIS/0x920912668fE3B30F2f286E913a5F3c974e002aEB/false": {
     name: 'How to buy'
   },
-  "/Mission": {
+  "Mission": {
     name: 'Mission'
   },
-  "/Airdrop": {
+  "Airdrop": {
     name: 'Airdrop'
   },
 }
@@ -43,10 +43,10 @@ const NavBar = () => {
           </Link>
           <div>
             <ul className='flex justify-between items-center gap-4 lg:gap-10 '>
-              {Object.entries(navItems).map(([path, { name }]) => {
+              {Object.entries(navItems).map(([path, { name }], index) => {
                 const isActive = path === pathname;
                 return (
-                  <Link key={path} href={`#${path.substring(1)}`}
+                  <Link key={path} href={index == 1 ? `${path}` : `#${path}`} target={index == 1 ? '_blank' : ''}
                     className=' md:block hidden font-normal text-[#1F1E1E] text-[12.5px] dark:text-[#FFFFFF]'
                   >
                     {name}
@@ -88,10 +88,10 @@ const NavBar = () => {
               </div>
             ) : ''}
             <div className='gap-3 flex flex-col py-6 px-6 '>
-              {Object.entries(navItems).map(([path, { name }]) => {
+              {Object.entries(navItems).map(([path, { name }], index) => {
                 const isActive = path === pathname;
                 return (
-                  <Link key={path} href={`#${path.substring(1)}`}
+                  <Link key={path} href={index == 1 ? `${path}` : `#${path}`} target={index == 1 ? '_blank' : ''}
                     onClick={() => handleOpened()}
                     className='font-normal text-[#1F1E1E] text-[12px] dark:text-[#FFFFFF]'
                   >

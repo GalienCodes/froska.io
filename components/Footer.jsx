@@ -29,12 +29,12 @@ const Footer = () => {
                             <Link href={'/'} className="mb-1.5">Feedback</Link>
                             <Link href={'https://t.me/metisfroska'} target='_blank' className="mb-1.5">Community</Link>
                         </ul>
-                        <ul className="hidden md:flex flex-col py-2">
+                        <ul className="flex flex-col py-2">
                             <Link href={'#Mission'} className="mb-1.5">Tokenomics </Link>
                             <Link href={'#Mission'} className="mb-1.5">Mission</Link>
-                            <Link href={'#Airdrop'} className="mb-1.5">Airdrop</Link>
+                            <Link href="https://hermes.maiadao.io/#/add/METIS/0x920912668fE3B30F2f286E913a5F3c974e002aEB/false" target='_blank' className="mb-1.5">Buy Froska</Link>
                         </ul>
-                        <ul className="py-2 flex flex-col">
+                        <ul className="hidden md:flex py-2 flex-col">
                             <Link href={'https://t.me/metisfroska'} target='_blank' className="mb-1.5">Help & Support </Link>
                             <Link href={'/'} className="mb-1.5">Safety & Security </Link>
                             <Link href={'/'} className="mb-1.5">Froska Foundation</Link>
