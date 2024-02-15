@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { truncate } from '@/store';
 import { LuCopyCheck, LuCopy } from "react-icons/lu";
+import { addFroskaMetamask } from '@/web3Services';
+import { MdAddCircleOutline } from 'react-icons/md';
 
 const ClipboardCopy = ({ copyText }) => {
     const [isCopied, setIsCopied] = useState(false);
@@ -32,17 +34,22 @@ const ClipboardCopy = ({ copyText }) => {
 
     return (
         <div>
-            <p className='flex bg-[#242529] dark:bg-[#FFFFFF] gap-4 px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
-                <span className='text-[12.5px] font-semibold' value={copyText}>
+            <div className='flex bg-[#242529] dark:bg-[#FFFFFF] gap-4 px-3 py-2 rounded-md text-[#FFFFFF] dark:text-[#1F1E1E] items-center'>
+                <p className='text-[12.5px] font-semibold' value={copyText}>
                     {truncate(copyText, 6, 8, 17)}
-                </span>
-                <span onClick={handleCopyClick}>
-                    {isCopied ?
-                        <LuCopyCheck className='flex items-center text-green-600' size={20} />
-                        : <LuCopy className='flex items-center' size={20} />
-                    }
-                </span>
-            </p>
+                </p>
+                <div className='flex gap-2'>
+                    <span onClick={handleCopyClick}>
+                        {isCopied ?
+                            <LuCopyCheck className='flex items-center text-green-600' size={20} />
+                            : <LuCopy className='flex items-center' size={20} />
+                        }
+                    </span>
+                    <span>
+                        <MdAddCircleOutline onClick={addFroskaMetamask} className='flex items-center' size={20} />
+                    </span>
+                </div>
+            </div>
         </div>
     );
 }

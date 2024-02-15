@@ -289,5 +289,24 @@ const checkContractBalance = async () => {
     }
 }
 
+const addFroskaMetamask = async () => {
+    try {
+      const { ethereum } = window
+      await ethereum.request({
+        method: 'wallet_watchAsset',
+        params: {
+          type: 'ERC20',
+          options: {
+            address: "0x920912668fE3B30F2f286E913a5F3c974e002aEB",  // ERC20 token address
+            symbol: `FROSKA`,
+            decimals: 18,
+            image: 'https://i.ibb.co/yStcSj3/froska-icon-4x-100.jpg',
+          },
+        },
+      })
+    } catch (error) {
+      console.error(error)
+    }
+  }
 
-export { AirdropContract, FroskaContract, ApproveAmount,connectWallet, startTheAirdrop, checkHasClaimed, checkIsEligible, checkContractBalance, withdrawRBalance, isWalletConnected, depositAmount, claim, getFounder }
+export { addFroskaMetamask, AirdropContract, FroskaContract, ApproveAmount,connectWallet, startTheAirdrop, checkHasClaimed, checkIsEligible, checkContractBalance, withdrawRBalance, isWalletConnected, depositAmount, claim, getFounder }

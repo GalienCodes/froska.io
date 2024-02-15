@@ -4,8 +4,10 @@ import heroDark from '../assets/hero-dark.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { TiArrowRight } from 'react-icons/ti'
+import { MdAddCircleOutline } from "react-icons/md";
 import { useGlobalState } from '@/store'
 import ClipboardCopy from './ClipboardCopy';
+import { addFroskaMetamask } from '@/web3Services';
 
 const Hero = () => {
     const [darkMode] = useGlobalState('darkMode');
@@ -31,7 +33,7 @@ const Hero = () => {
                                     </span>
                                     <TiArrowRight className='flex items-center' size={20} />
                                 </button>
-                            </Link>
+                            </Link> 
                             <ClipboardCopy copyText="0x920912668fE3B30F2f286E913a5F3c974e002aEB" />
                         </div>
                     </div>
