@@ -107,7 +107,8 @@ const ClaimModal = () => {
             ) : ''}
             <div className='gap-3 flex flex-col py-6 px-6 dark:text-[#FFFFFF] text-[#1F1E1E] '>
                 <div className='flex justify-between items-center'>
-                    <h1 className='font-GilroyBold text-lg md:text-xl '>Requirements</h1> <p className='font-formGilroyRegular'>Bal: <span className='font-GilroyMedium'>{contractBalance} Froska</span></p>
+                    <h1 className='font-GilroyBold text-lg md:text-xl '>Requirements</h1> 
+                    {founderAccount === connectedAccount ? <p className='font-formGilroyRegular'>Bal: <span className='font-GilroyMedium'>{contractBalance} Froska</span></p>:<p> </p>}
                 </div>
                 <p className='font-GilroyRegular text-xs w-full md:w-11/12 pt-4 md:pt-2'>
                     Only <span className='font-GilroyBold '>MIP2/ MIP3 CEG voters, Metis Advocates and Nuvo Contributors: Nuvo AMA badge holders, Nuvo Festive Spirit participants, Nuvo Participation Badge holders</span> are eligible to claim FROSKA airdrop in this round. Claim starts on 15th feb to 1st march. Not eligible? There are 20 Million Froska allocated for future rewards,  follow Froska Twitter and join Telegram Community to stay updated.
